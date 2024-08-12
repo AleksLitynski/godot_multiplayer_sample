@@ -27,3 +27,7 @@ When a client connects, it will have no avatar, but can see the state of the gam
 Any client can press "Request New Round" at any time to restart the round with a new avatar for each player.
 
 The only actions players can take is moving via WASD.
+
+## Presentation
+
+PPT talking about multiplayer game development and godot - https://docs.google.com/presentation/d/1PWvL0cE7FE_vAofBUoeznIgYG6BkznugV11fofmM3d0/edit?usp=sharing
