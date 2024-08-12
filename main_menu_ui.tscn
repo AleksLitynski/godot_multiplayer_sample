@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2hpwhhrpxcxp"]
+
+[ext_resource type="Script" path="res://main_menu_ui.gd" id="1_ive70"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qw8xl"]
+font_size = 48
+
+[node name="MainMenuUi" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ive70")
+
+[node name="title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 127.0
+offset_right = 796.0
+offset_bottom = 205.0
+text = "Multiplayer Sample"
+label_settings = SubResource("LabelSettings_qw8xl")
+
+[node name="server_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 297.0
+offset_right = 433.0
+offset_bottom = 320.0
+text = "Server"
+
+[node name="server_port_input" type="LineEdit" parent="server_label"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 61.0
+offset_top = -4.0
+offset_right = 288.0
+offset_bottom = 27.0
+text = "127.0.0.1:7777"
+placeholder_text = "127.0.0.1:7777"
+
+[node name="connect_btn" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 491.0
+offset_top = 358.0
+offset_right = 563.0
+offset_bottom = 389.0
+text = "Connect"

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://0gxhgr1ix3ye"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_ppl3d"]
+[ext_resource type="Script" path="res://camera.gd" id="2_qvwwi"]
+[ext_resource type="Texture2D" uid="uid://b4ptyqr1vv5re" path="res://icon.svg" id="3_5vcej"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i88sb"]
+albedo_texture = ExtResource("3_5vcej")
+
+[sub_resource type="QuadMesh" id="QuadMesh_44fit"]
+material = SubResource("StandardMaterial3D_i88sb")
+
+[node name="main" type="Node3D"]
+script = ExtResource("1_ppl3d")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_right = 310.0
+offset_bottom = 645.0
+
+[node name="logs" type="VBoxContainer" parent="ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.789234, 0.614092, 0, -0.614092, 0.789234, 0, 4.0033, 3.80094)
+script = ExtResource("2_qvwwi")
+
+[node name="spawner" type="MultiplayerSpawner" parent="."]
+unique_name_in_owner = true
+_spawnable_scenes = PackedStringArray("res://player.tscn", "res://enemy.tscn", "res://character.tscn")
+spawn_path = NodePath("..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(24.8179, 0, 0, 0, -8.42555e-07, 1, 0, -19.2754, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_44fit")

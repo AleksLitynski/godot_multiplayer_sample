@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg5gbsohvarb4"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_mls71"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_dqd7u"]
+
+[node name="Player" type="Node" groups=["players"]]
+script = ExtResource("1_mls71")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_dqd7u")

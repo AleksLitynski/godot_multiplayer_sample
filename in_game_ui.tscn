@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://eeu8do3kewn5"]
+
+[ext_resource type="Script" path="res://in_game_ui.gd" id="1_gw8nv"]
+
+[node name="InGameUi" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gw8nv")
+
+[node name="request_new_round" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 944.0
+offset_top = 577.0
+offset_right = 1109.0
+offset_bottom = 608.0
+text = "Request New Round"
